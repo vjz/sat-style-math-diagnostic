@@ -1,0 +1,10 @@
+{
+  "name": "sat-practice-test",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "serve": "python3 -m http.server 8787"
+  }
+}
