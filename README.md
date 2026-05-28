@@ -16,6 +16,7 @@ Static, Cloudflare Pages-ready SAT-style math diagnostic.
 
 ```bash
 npm run check
+npm run build
 npm run serve
 ```
 
@@ -26,7 +27,8 @@ Open `http://localhost:8787`.
 Build settings:
 
 - Framework preset: None
-- Build command: leave blank, or `npm run check`
-- Build output directory: `/`
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Root directory: `/`
 
-If Cloudflare requires an output directory, set it to the project root.
+Do not set the output directory to `/`; Cloudflare will try to upload `node_modules`, which includes oversized Worker binaries.
